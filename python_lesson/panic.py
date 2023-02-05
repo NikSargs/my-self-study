@@ -14,4 +14,4 @@ new_phrase = ''.join(plist)
 print(plist)
 print(new_phrase)
     
-    
+
