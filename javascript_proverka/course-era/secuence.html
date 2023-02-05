@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing selections and booleans</title>
+</head>
+<body>
+  
+  <h1>Loops in JS</h1>
+  <script>
+
+    let foods = ["apple", "bread", "cake", "carrot"];
+
+
+    let myString = "I am realy hungry for some";
+
+    //console.log(myString);
+
+    let myStringUpper = myString.toUpperCase();
+
+    //console.log(myStringUpper);
+
+    let realyLocation = myString.search("realy");
+
+    let specialWord = myString.substr(realyLocation, 5);
+    
+    specialWord = specialWord.toUpperCase();
+
+    let newString = myString.replace("realy", specialWord);
+
+    //console.log(newString);
+
+    //console.log(`${newString} ${foods[0]}`);
+
+    // let i = 0;
+
+    // let text = "";
+
+    // while (i < 4) {
+    //   text += `${newString} ${foods[i]} \n`;
+    //   i++;
+    // }
+    // console.log(text);
+
+    // for( i = 0; i < foods.length; i++){
+    //     console.log(`${newString} ${foods[i]}`);
+    // }
+ 
+    // for (let eachFood of foods){
+    //   console.log(`${newString} ${eachFood}`);
+    // }
+
+    // for( i = 0; i < foods.length; i++){
+    //   if(i % 2 == 0) {
+    //     console.log(`${myString} ${foods[i].toUpperCase()}`);
+    //   }
+    //   else {
+    //     console.log(`${myString} ${foods[i]}`);
+    //   }
+    // }
+
+    // for( i = 0; i < foods.length; i++){
+
+    //   let remainder = i % 2;
+
+    //   if(remainder === 0) {
+    //     let foodUpper = foods[i].toUpperCase();
+    //     console.log(`${myString} ${foodUpper}`);
+    //   }
+    //   else {
+    //     console.log(`${myString} ${foods[i]}`);
+    //   }
+    // }
+
+
+  </script>
+</body>
+</html> 

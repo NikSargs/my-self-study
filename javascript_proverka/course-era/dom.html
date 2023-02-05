@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Examples</title>
+  <style>
+      .blue {
+        color: blue;
+      }
+  </style>
+</head>
+<body>
+  <!--<div id ="special">
+      <p>Here is a paragraph</p>
+      <p>Here is some text</p>
+      <p>Here is some more text</p>
+  </div>-->
+
+  <form>
+    <label><input type="checkbox"> YES!</label>
+  </form>
+
+  <div>
+     <p>sdfdsf</p>
+     <p>remove</p>
+  </div>
+
+  <script>
+    // let ps = document.getElementsByTagName('p');
+    
+    // for (let i = 0; i < ps.length; i++){
+    //   ps[i].style.color = "red";
+    //   alert(`showing paragpaph ${i}`);
+    // }
+
+    // let myClass = document.getElementsByClassName('special');
+
+    // for(let i = 0; i < myClass.length; i++){
+    //   myClass[i].style.color = "red";
+    // }
+
+    // let myText = document.querySelector('#special .someclass');
+    // myText.style.color = "red";
+
+    // let myText = document.querySelectorAll('#special p');
+    // for (let i = 0; i < myText.length; i ++){
+    //   myText[i].style.color = "red";
+    // }
+
+    // let myDiv = document.getElementById('special');
+    // myDiv.innerHTML = "<p> Here is my new paragraph</p>";
+
+    // let firstPara = document.querySelector('p');
+    // firstPara.className = "blue";
+
+    // let myCheckbox = document.querySelector('input');
+    // myCheckbox.setAttribute('checked', 'checked');
+
+    // let myTag = document.createElement('p');
+    // let myText = document.createTextNode("Here is a new paragraph");
+
+    // myTag.appendChild(myText);
+
+    // let myDiv = document.querySelector('div');
+    // myDiv.appendChild(myTag);
+
+    let myDiv = document.querySelector('div');
+    myDiv.removeChild(myDiv.children[1]);
+
+</script>
+</body>
+</html>

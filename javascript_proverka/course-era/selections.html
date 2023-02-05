@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Testing selections and booleans</title>
+</head>
+<body>
+  
+  <h1>Selectiosn</h1>
+  <script>
+    let white = false;
+    let blue = false;
+    let red = -1;
+    let myNum = 5;
+    let otherNum = 6;
+    let notNum = "chicken";
+    let myValue = notNum - myNum;
+
+    // if (myValue) {
+    //       console.log("stat. is true");
+    // } else {
+    //       console.log("stat. is false");
+    // }
+
+    let colors = ["red", "green", "blue", "yellow"];
+    let selectedColor = colors[3];
+
+    // if(selectedColor == "red"){
+    //   console.log("the color is red");
+    // } else if (selectedColor == "green"){
+    //   console.log("the color is green");
+    // } else if (selectedColor == "blue"){
+    //   console.log("the color is blue");
+    // } else {
+    //   console.log("the color is yellow");
+    // }
+
+    // switch(selectedColor){
+    //   case "red": console.log("the color is red");
+    //     break;
+    //   case "green": console.log("the color is green");
+    //     break;
+    //   case "blue": console.log("the color is blue");
+    //     break;
+    //   case "yellow": console.log("the color is yellow");
+    //     break;
+    //   default: console.log("there is an error");
+    // }
+
+    // let goodMood = false;
+    // let gotSleep = true;
+
+    // if (goodMood && gotSleep) {
+    //   console.log("Today is a good day");
+    // }
+    // else {
+    //   console.log("I am grumpy");
+    // }
+    let gotBreakfast = false;
+    let gotLunch = false;
+
+    let gotDinner = false;
+
+    if (gotBreakfast || gotLunch || gotDinner) {
+      console.log("thing are ok");
+    } else {
+      console.log("starving");
+    }
+
+  </script>
+</body>
+</html>

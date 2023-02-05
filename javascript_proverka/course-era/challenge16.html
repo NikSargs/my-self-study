@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge13</title>
+</head>
+<body>
+  <script>
+
+    yourName = prompt('write your name', '');
+
+    // function hello(name) {
+    //     if (yourName == ''){
+    //       console.log('you didnt write anything');
+    //     }else {
+    //       console.log(`hello ${yourName} and welcome`);
+    //     }
+    // }
+
+    let foods = ['apple', 'bread', 'carrot', 'chicken'];
+
+    // function hello(name, food) {
+
+    //   let greeting;
+
+    //     if (name == null || name == ''){
+    //       greeting = 'you didnt write anything';
+    //     }else {
+    //       greeting = `hello ${yourName} and welcome`;
+
+    //       for (let i = 0; i < foods.length; i++){
+    //         console.log(`${yourName} would you like some ${foods[i]}`);
+    //       }
+    //     }
+    //     return greeting;
+    // }
+
+    function hello(name) {
+
+      let greeting;
+
+        if (name == null || name == ''){
+          greeting = 'you didnt write anything';
+        }else {
+          greeting = `hello ${yourName} and welcome`;
+        }
+        return greeting;
+    }
+
+    function hospitality(name, gift) {
+      console.log(hello(name));
+      let = randomFood = Math.floor(Math.random() * gift.length)
+      console.log(`${yourName} would you like some ${gift[randomFood]}`);
+      
+    }
+
+
+    hospitality(yourName, foods);
+    
+  </script>
+</body>
+</html> 

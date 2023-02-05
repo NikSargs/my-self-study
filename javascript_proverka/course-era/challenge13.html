@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Challenge13</title>
+</head>
+<body>
+  <script>
+
+    yourName = prompt('write your name', '');
+
+    // function hello(name) {
+    //     if (yourName == ''){
+    //       console.log('you didnt write anything');
+    //     }else {
+    //       console.log(`hello ${yourName} and welcome`);
+    //     }
+    // }
+
+    function hello(name) {
+        if (name == null || name == ''){
+          console.log('you didnt write anything');
+        }else {
+          console.log(`hello ${yourName} and welcome`);
+        }
+    }
+
+    hello(yourName);
+    
+  </script>
+</body>
+</html>

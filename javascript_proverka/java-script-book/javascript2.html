@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World</title>
+</head>
+<body>
+
+  <script>
+    // alert('Hello');
+    // alert('world');
+    // alert(3 + 1 + 2);
+    // alert('Hello');
+    // [1, 2].forEach(alert);
+    //alert('Hello')[1, 2].forEach(alert);
+
+  // let name = "Jo";
+
+  // alert(`Hello ${name}!`);
+
+  // alert (`result is ${1 + 2}`)
+
+  // let age = prompt('How old are you?', 200);
+
+  // alert(`You are ${age} years old`);
+
+  // let isBoss = confirm("You are the boss?");
+  // if (isBoss == true) {
+  //   alert('Hello Boss');
+  // } else {
+  //   alert('Go away');
+  // }
+
+  // alert(Number("    123     "));
+  // alert(Number('123z'));
+  // alert(Number(true));
+  // alert(Number(false));
+
+  // let x = 1;
+
+  // x = -x;
+  // alert(x);
+
+  // let counter = 1;
+  // alert(2 * counter);
+
+  // counter++;
+
+  // alert(2 > 1);
+  // alert(2 == 1);
+  // alert(2 != 1);
+
+  // let result = 5 > 4;
+  // alert(result);
+
+  // alert('я' >  'а');
+  // alert('коты' > 'кода');
+  // alert('сонный' > 'сон');
+
+  // let year = prompt('In what year it was developed', 2015);
+
+  // if (year < 2015) {
+  //   alert('you quite ahead');
+  // } else if (year > 2015){
+  //   alert('too late');
+  // } else {
+  //   alert('you are right');
+  // }
+
+  // let age = prompt('How old are you?', '');
+
+  // if (age > 18) {
+  //   accessAllowed = true;
+  // } else {
+  //   accessAllowed = false;
+  // }
+
+  // let age = prompt('How old are you?', '');
+
+  // let accessAllowed = age > 18 ? true : false;
+
+  // alert(accessAllowed);
+
+  // let question = prompt('JavaScript oficial name:', '')
+  // if (question == 'ECMAScript') {
+  //   alert('correct');
+  // } else {
+  //   alert('it is ECMAScript');
+  // }
+
+  // let num = prompt('number:', 1);
+
+  // if (num > 0) {
+  //   alert(1);
+  // } else if(num < 0) {
+  //   alert(-1);
+  // } else {
+  //   alert(0);
+  // }
+
+  // if (1 || 0) {
+  //   alert('thruthy');
+  // }
+
+  // let hour = 9;
+  // let isWeekend = true;
+
+  // if (hour < 10 || hour > 18 || isWeekend) {
+  //   alert('Офис закрыт.');
+  // }
+
+ // alert( alert(1) || 2 || alert(3) );
+
+  //result = (a !== null && a !== undefined) ? a : b;
+
+  // let user = "Jo";
+
+  // alert(user ?? "Anonim");
+
+  // let height = null;
+  // let width = null;
+
+  // let area = (height ?? 100) * (width ?? 50);
+
+  // alert(area);
+
+  // let i = 0;
+
+  // while (i < 3){
+  //   alert(i);
+  //   i++;
+  // }
+
+  // let i = 3;
+  // while (i) {
+  //   alert(i);
+  //   i--;
+  // }
+
+  // let i = 0;
+
+  // do {
+  //   alert(i);
+  //   i++;
+
+  // } while(i < 3);
+
+  // for (let i = 0; i < 3; i++) {
+  //   alert(i);
+  // }
+
+  // let i = 0;
+
+  // for (; i < 3;){
+  //   alert(i++ );
+  // }
+
+  // let sum = 0;
+
+  // while (true) {
+  //   let value = +prompt("inset number:", '');
+
+  //   if (!value) break;
+
+  //   sum += value;
+  // }
+  // alert('summ: ' + sum);
+
+  // for (let i = 0; i < 10; i++) {
+  //   if (i % 2 == 0) continue;
+
+  //   alert(i);
+  // }
+
+  // for (let i = 0; i < 3; i++) {
+  //   for (let j = 0; j < 3; j++) {
+  //     let input = prompt(`Значение на координатах ${i}, ${j}`, '');
+  //   }
+  // }
+
+  // alert('Готово');
+
+  // outer: for (let i = 0; i < 3; i++){
+  //   for (let j = 0; i < 3; j++) {
+  //     let input = prompt(`Значение на координатах (${i}, ${j})`, '');
+
+  //     if(!input) break outer;
+  //   }
+  // }
+
+  // for (i = 0; i <= 10; i++) {
+  //   if (i % 2 == 0) {
+  //     alert(i)
+  //   }
+  // }
+
+
+
+  //alert('Готово');
+
+  // for (let i = 0; i < 3; i++) {
+  //   alert( `number ${i}!` );
+  // }
+
+
+  // let i = 0;
+
+  // while(i < 3){
+  //   alert(`number ${i}!`);
+  //   i++;
+  // }
+
+  // let i = prompt('write a number: ', 0);
+
+  // for (; i <= 100; i++){
+  //   i = prompt('write a number: ', 0);
+
+  //   if(!i) break;
+  // }
+
+  // let num;
+
+  // do {
+  //   num = prompt("Write number more than 100: ", 0);
+  // } while (num <= 100 && num);
+
+  // let n = 10;
+
+  // nextPrime:
+  // for (let i = 2; i <= n; i++) { // Для всех i...
+
+  //   for (let j = 2; j < i; j++) { // проверить, делится ли число..
+  //     if (i % j == 0) continue nextPrime; // не подходит, берём следующее
+  //   }
+
+  //   alert( i ); // простое число
+  // }
+
+  // let a = 2 + 2;
+
+  // switch (a) {
+  // case 3:
+  //   alert('small');
+  //   break;
+  // case 4:
+  //   alert('that is ok');
+  //   break;
+  // case 5:
+  //   alert('to big');
+  //   break;
+  // default:
+  //   alert('No data');
+  // }
+
+  // let a = '1';
+
+  // let b = 0;
+
+  // switch (+a) {
+  //   case b + 1:
+  //     alert('it will be done');
+  //     break;
+
+  //   default:
+  //     alert("it won't be done");
+  // }
+
+  // let a = 3;
+
+  // switch(a) {
+  //   case 4:
+  //     alert('Right');
+  //     break;
+
+  //   case 3:
+  //   case 5:
+  //     alert('not right');
+  //     alert('that is not it');
+
+  //   default:
+  //     alert('something seems off');
+  // }
+
+  // let arg = prompt('write a number', '');
+  // switch(arg) {
+  // case '0':
+  // case '1':
+  //   alert('1 or 0');
+  //   break;
+  // case '2':
+  //   alert('two');
+  //   break;
+  // case 3:
+  //   alert('Will not be done');
+  //   break;
+  // default:
+  //   alert('unknown value');
+  // }
+
+  // if (browser == 'edge'){
+  //   alert( "You've got the Edge!" );
+  //   else if (browser == 'Chrome' || 'Firefox' || 'Safari' || 'Opera') {
+  //     alert('you can use it');
+  //   }else {
+  //     alert( 'We hope that this page looks ok!' );
+  //   }
+  // }
+
+  // const number = +prompt('Введите число между 0 и 3', '');
+  // switch(number) {
+  //   case 0:
+  //     alert('Вы ввели число 0');
+  //     break;
+  //   case 1:
+  //     alert('Вы ввели число 1');
+  //     break;
+  //   case 2:
+  //   case 3:
+  //     alert('Вы ввели число 2, а может и 3');
+  //     break;
+  // }
+
+  // function cubes(s) {
+  //   return s * s * s;
+  // }
+
+  // console.log(cubes(3));
+
+  // function showMessage(greeting) {
+  //   alert(greeting);
+  // }
+
+  // showMessage('Hello');
+  // showMessage('there');
+
+  // let userName = 'jo';
+
+  // function showMessage() {
+  //   userName = 'Mark';
+
+  //   let message = 'Hello, ' + userName;
+  //   alert(message);
+  // }
+
+  // alert(userName);
+
+  // showMessage();
+
+  // alert(userName);
+
+  // function showMessage(from, text) {
+  //   alert(from + ': ' + text);
+  // }
+
+  // showMessage('Jo');
+  // showMessage('Jo', 'How are you');
+
+  // function showCount(count) {
+
+  //   alert(count ?? 'unknown');
+  
+  // }
+  // showCount(0);
+  // showCount(null);
+  // showCount();
+
+  // function sum(a, b) {
+  //   return a + b;
+  // }
+
+  // let result = sum(1, 2);
+  // alert(result);
+
+  // function checkAge(age) {
+  //   if (age >= 18) {
+  //     return true;
+  //   } else {
+  //     return confirm('parents know?');
+  //   }
+  // }
+  // let age = prompt('How old are you?', 18);
+
+  // if (checkAge(age)) {
+  //   alert('Access granted');
+  // } else {
+  //   alert('access locked');
+  // }
+
+  // function checkAge(age) {
+  //   if (age > 18) {
+  //     return true;
+  //   } else {
+  //     return confirm('Родители разрешили?');
+  //   }
+  // }
+
+  // function checkAge(age) {
+  //   let accessAllowed = age > 18 ? true : confirm('are you allowed?');
+
+  // }
+
+  // checkAge(20);
+
+  // function checkAge(age) {
+  //   return (age > 18) || confirm('Are you allowed?');
+  // }
+
+  // checkAge(15);
+
+  // function min(a, b) {
+  //   if (b > a) {
+  //     alert(a);
+  //   } else {
+  //     alert(b);
+  //   }
+  // }
+  // min(2, 5);
+
+  // pow(x, n) {
+
+  // }
+
+  // function sayHi() {
+  //   alert('Hello');
+  // }
+
+  function ask(question, yes, no) {
+    if (confirm(question)) yes()
+    else no();
+  }
+
+  ask(
+    "Вы согласны?",
+    function() { alert("Вы согласились."); },
+    function() { alert("Вы отменили выполнение."); 
+  });
+
+
+  </script>
+</body>
+</html>

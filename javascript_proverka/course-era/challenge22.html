@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Hello there</title>
+</head>
+<body>
+  <h1>Hello there</h1>
+  <h1>Hello there</h1>
+  <h1>Hello there</h1>
+  <h1>Hello there</h1>
+  <h1>Hello there</h1>
+  <button>turn green</button>
+  <script>
+    let ptag = document.querySelector('h1');
+    let btn = document.querySelector('button');
+
+    btn.addEventListener('click', function(){
+
+      for (let i = 0; i <ptag.length; i++){
+        ptag[i].style.color = "green";
+      }
+    });
+  </script>
+</body>
+</html>
