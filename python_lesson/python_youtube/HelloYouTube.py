@@ -1,11 +1,9 @@
-x = 1
-y = 2.0
-z = '3'
+name = input("What is your name?: ")
+age = int(input('How old are you?: '))
+height = float(input('How tall are you?: '))
 
-x = str(x)
-y = str(y)
-z = str(z)
+age += 1
 
-print("x is " + str(x))
-print("y is " + str(y))
-print(z*3)
+print('Hello ' + name)
+print('You are ' + str(age) + ' years old.')
+print('You are ' + str(height) + 'cm tall')
