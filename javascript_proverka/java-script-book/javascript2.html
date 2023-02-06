@@ -8,81 +8,46 @@
 
   <script>
 
+  // let user = { name: 'John' };
+  // let admin = { name: 'Admin' };
 
-    // let message = 'Hi';
-    // let phrase = message;
-
-    // sum = alert(salaries[0] + salaries[1] + salaries[2]);
-
-  // let user = { name: 'Jo' };
-
-  // let admin = user;
-
-  // admin.name = 'Pete';
-
-  // alert(user.name);
-
-  // let a = {};
-
-  // let b = a;
-
-  // alert( a == b );
-  // alert( a === b );
-
-/*----Метод копирования обьектов в другой список--------*/
-
-  // let user = {
-  //   name: 'Jo',
-  //   age: 30
+  // function sayHi() {
+  //   alert( this.name );
   // }
 
+  // user.f = sayHi;
+  // admin.f = sayHi;
+
+  // user.f();
+  // admin.f();
+
+  // admin['f']();
+
+let calculator = { 
+  read:  function () {
+    calculator.num1 = prompt('Write first number: ', '');
+    calculator.num2 = prompt('Write second number: ', '');
+  },
+  sum: function () {
+    let theSum = +this.num1 + +this.num2;
+
+    return theSum;
+  },
+  mul: function () {
+    let theMul = this.num1 * this.num2;
+
+    return theMul;
+  }
+};
 
 
-  // let clone = {};
 
-  // for (let key in user) {
-  //   clone[key] = user[key];
-  // }
+calculator.read();
 
-  // clone.name = 'Pete';
+alert( calculator.sum() );
+alert( calculator.mul() );
 
-  // alert(user.name);
-  // alert(clone.name);
 
-  // let user = { name: 'Jo' };
-
-  // let permissions1 = { canView: true };
-  // let permissions2 = { canEdit: true };
-
-  // Object.assign(user, permissions1, permissions2);
-
-  // console.log(user);
-
-  // let user = {name: 'Jo'};
-
-  // Object.assign(user, {name: 'Pete'});
-
-  // alert(user.name);
-
-  // let user = {
-  //   name: 'Jo',
-  //   sizes: {
-  //     height: 182,
-  //     width: 50
-  //   }
-  // };
-
-  // let clone = Object.assign({}, user);
-
-  // alert( user.sizes === clone,sizes );
-
-  // user.sizes.width++;
-
-  // alert(user.sizes.height);
-
-/*----Clone Deep для обектов внутри списков-----*/
-
-  let object = 
 
   </script>
 </body>
