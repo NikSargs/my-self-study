@@ -1,0 +1,213 @@
+found['a'] = 0
+Traceback (most recent call last):
+  File "<pyshell#0>", line 1, in <module>
+    found['a'] = 0
+NameError: name 'found' is not defined. Did you mean: 'round'?
+found{}
+SyntaxError: invalid syntax
+found = {}
+found['a'] = 0
+found['e'] = -
+SyntaxError: invalid syntax
+found['e'] = 0
+found['i'] = 0
+found['o'] = 0
+found['u'] = 0
+found
+{'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}
+fruits{}
+SyntaxError: invalid syntax
+fruits
+Traceback (most recent call last):
+  File "<pyshell#11>", line 1, in <module>
+    fruits
+NameError: name 'fruits' is not defined
+fruits = {}
+fruits['apples'] = 10
+fruits
+{'apples': 10}
+apples in fruits
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    apples in fruits
+NameError: name 'apples' is not defined
+'apples' in fruits
+True
+fruits['bananas'] = 10
+if 'banabas' in fruits:
+    fruits['bananas'] += 1
+else:
+    fruits['bananas'] = 1
+
+    
+fruits
+{'apples': 10, 'bananas': 1}
+{'apples': 10, 'bananas': 1}
+{'apples': 10, 'bananas': 1}
+fruits['bananas'] = 10
+if 'bananas' in fruits:
+    fruits['bananas'] += 1
+else:
+    fruits['bananas'] = 1
+
+SyntaxError: multiple statements found while compiling a single statement
+
+fruits['bananas'] = 10
+if 'bananas' in fruits:
+    fruits['bananas'] += 1
+else:
+    fruits['bananas'] = 1
+    
+SyntaxError: multiple statements found while compiling a single statement
+if 'bananas' in fruits:
+    fruits['bananas'] += 1
+else:
+    fruits['bananas'] = 1
+
+    
+fruits
+{'apples': 10, 'bananas': 2}
+
+if 'pears' not in fruits:
+    fruits['pears'] = 0
+
+    
+
+fruits['pears'] += 1
+fruits
+{'apples': 10, 'bananas': 2, 'pears': 1}
+
+============== RESTART: D:\my-self-study\python_lesson\vowels4.py ==============
+Provide a word to search for vowels: asdf
+Traceback (most recent call last):
+  File "D:\my-self-study\python_lesson\vowels4.py", line 7, in <module>
+    found[letter] += 1
+KeyError: 'a'
+
+============== RESTART: D:\my-self-study\python_lesson\vowels4.py ==============
+Provide a word to search for vowels: adsas
+a was found 2 time(s).
+
+============== RESTART: D:\my-self-study\python_lesson\vowels4.py ==============
+Provide a word to search for vowels: hitch-hicker
+e was found 1 time(s).
+i was found 2 time(s).
+vowels = { 'a', 'e', 'e', 'i', 'o', 'u', 'u' }
+vowels
+{'a', 'u', 'e', 'i', 'o'}
+vowels2 = set('aeeiouu')
+vowels2
+{'a', 'u', 'i', 'o', 'e'}
+vowels = set('aeiou')
+word = 'hello'
+u = vowels.union(set(word))
+u
+{'a', 'h', 'u', 'l', 'i', 'o', 'e'}
+u_list = sorted(list(u))
+u_list
+['a', 'e', 'h', 'i', 'l', 'o', 'u']
+d = vowels.difference(set(word))
+d
+{'a', 'i', 'u'}
+i = vowels.intersection(set(word))
+i
+{'e', 'o'}
+
+============== RESTART: D:/my-self-study/python_lesson/vowels7.py ==============
+Provide a word to search for vowels: hello
+Traceback (most recent call last):
+  File "D:/my-self-study/python_lesson/vowels7.py", line 3, in <module>
+    found = word.intersection(set(vowels))
+AttributeError: 'str' object has no attribute 'intersection'
+
+============== RESTART: D:/my-self-study/python_lesson/vowels7.py ==============
+Provide a word to search for vowels: hello
+e
+o
+vowels = ['a', 'e', 'i', 'o', 'u']
+type(vowels)
+<class 'list'>
+vowels2 = ('a', 'e', 'i', 'o', 'u')
+type(vowels2)
+<class 'tuple'>
+vowels
+['a', 'e', 'i', 'o', 'u']
+]
+vowels2
+('a', 'e', 'i', 'o', 'u')
+vowels[2] = 'i'
+vowels
+['a', 'e', 'i', 'o', 'u']
+vowels[2] = 'I'
+vowels
+['a', 'e', 'I', 'o', 'u']
+vowels2[2] = 'I'
+Traceback (most recent call last):
+  File "<pyshell#62>", line 1, in <module>
+    vowels2[2] = 'I'
+TypeError: 'tuple' object does not support item assignment
+t = ('Python')
+type(t)
+<class 'str'>
+t2 = ('Python',)
+t2
+('Python',)
+type(t2_
+     )
+Traceback (most recent call last):
+  File "<pyshell#68>", line 1, in <module>
+    type(t2_
+NameError: name 't2_' is not defined. Did you mean: 't2'?
+type(t2)
+         
+<class 'tuple'>
+people = {}
+         
+people['Ford'] = { 'Name': 'Ford Prefect',
+                   'Gender': 'Male',
+                   'Occupation': 'Researcher',
+                   'Home Planet': 'Mars'}
+         
+people
+         
+{'Ford': {'Name': 'Ford Prefect', 'Gender': 'Male', 'Occupation': 'Researcher', 'Home Planet': 'Mars'}}
+people['Arthur'] = { 'Name': 'Arthur Dent',
+                   'Gender': 'Male',
+                   'Occupation': 'Sandwich-Maker',
+                   'Home Planet': 'Earth'}
+         
+people['Tricia'] = { 'Name': 'Tricia McMillan',
+                   'Gender': 'Female',
+                   'Occupation': 'Mathematician',
+                   'Home Planet': 'Earth'}
+         
+people['Marvin'] = { 'Name': 'Marvin',
+                   'Gender': 'Unknown',
+                   'Occupation': 'Paranoid Android',
+                   'Home Planet': 'Unknown'}
+         
+people
+         
+{'Ford': {'Name': 'Ford Prefect', 'Gender': 'Male', 'Occupation': 'Researcher', 'Home Planet': 'Mars'}, 'Arthur': {'Name': 'Arthur Dent', 'Gender': 'Male', 'Occupation': 'Sandwich-Maker', 'Home Planet': 'Earth'}, 'Tricia': {'Name': 'Tricia McMillan', 'Gender': 'Female', 'Occupation': 'Mathematician', 'Home Planet': 'Earth'}, 'Marvin': {'Name': 'Marvin', 'Gender': 'Unknown', 'Occupation': 'Paranoid Android', 'Home Planet': 'Unknown'}}
+import pprint
+pprint.pprint(people)
+{'Arthur': {'Gender': 'Male',
+            'Home Planet': 'Earth',
+            'Name': 'Arthur Dent',
+            'Occupation': 'Sandwich-Maker'},
+ 'Ford': {'Gender': 'Male',
+          'Home Planet': 'Mars',
+          'Name': 'Ford Prefect',
+          'Occupation': 'Researcher'},
+ 'Marvin': {'Gender': 'Unknown',
+            'Home Planet': 'Unknown',
+            'Name': 'Marvin',
+            'Occupation': 'Paranoid Android'},
+ 'Tricia': {'Gender': 'Female',
+            'Home Planet': 'Earth',
+            'Name': 'Tricia McMillan',
+            'Occupation': 'Mathematician'}}
+people['Arthur']['Occupation']
+'Sandwich-Maker'
+type(people)
+<class 'dict'>
