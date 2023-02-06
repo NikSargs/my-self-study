@@ -1,9 +1,10 @@
-name = input("What is your name?: ")
-age = int(input('How old are you?: '))
-height = float(input('How tall are you?: '))
+import math
 
-age += 1
+pi = 3.14
 
-print('Hello ' + name)
-print('You are ' + str(age) + ' years old.')
-print('You are ' + str(height) + 'cm tall')
+#print(round(pi)) - whole number
+#print(math.ceil(pi)) - maximum integer
+#print(math.floor(pi)) - minimal integer
+#print(abs(pi)) - number to 0
+#print(pow(pi,2)) - power of two numbers
+#print(math.sqrt(pi)) - квадратный корень
