@@ -2,126 +2,87 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Hello World</title>
+  <title>Hello</title>
 </head>
 <body>
 
   <script>
 
-    // const user = {
-    //   name: 'Jo',
-    //   age : 30,
-    //   //"likes birds": true
-    // };
 
-    // user.name = "Pete";
+    // let message = 'Hi';
+    // let phrase = message;
 
-    // user["likes birds"] = true;
+    // sum = alert(salaries[0] + salaries[1] + salaries[2]);
 
-    // alert(user["likes birds"]);
+  // let user = { name: 'Jo' };
 
-    // delete user["likes birds"];
+  // let admin = user;
 
-    // alert(user.name);
-    // alert(user.age);
+  // admin.name = 'Pete';
 
-    // user.isAdmin = true;
-    // console.log(user);
+  // alert(user.name);
 
-    // delete user.age;
+  // let a = {};
 
-    // console.log(user);
+  // let b = a;
 
-    // let user = {
-    //   name : 'Jo',
-    //   age : 30
-    // };
+  // alert( a == b );
+  // alert( a === b );
 
-    // let key = prompt("What you know about him?", 'name');
+/*----Метод копирования обьектов в другой список--------*/
 
-    // alert(user[key]);
+  // let user = {
+  //   name: 'Jo',
+  //   age: 30
+  // }
 
-    // let fruit = prompt('Which fruit?', 'apple');
 
-    // let bag = {
-    //   [fruit]: 5,
 
-    // };
+  // let clone = {};
 
-    // alert(bag.apple);
+  // for (let key in user) {
+  //   clone[key] = user[key];
+  // }
 
-    // function makeUser(name, age) {
-    //   return{
-    //     name: name,
-    //     age: age
-    //   };
-    // }
+  // clone.name = 'Pete';
 
-    // let user  = makeUser("jo", 30);
-    // alert(user.name);
+  // alert(user.name);
+  // alert(clone.name);
 
-    // let user = {name: 'Jo', age: 30};
+  // let user = { name: 'Jo' };
 
-    // alert('age' in user);
-    // alert('blabla' in user);
+  // let permissions1 = { canView: true };
+  // let permissions2 = { canEdit: true };
 
-      // let user = {
-      //   name: 'Jo',
-      //   age: 30,
-      //   isAdmin: true
-      // };
+  // Object.assign(user, permissions1, permissions2);
 
-      // for (let key in user) {
-      //   alert( key );
+  // console.log(user);
 
-      //   alert( user[key] );
-      // }
+  // let user = {name: 'Jo'};
 
-    // let codes = {
-    //   '49': 'Германия',
-    //   '41': 'Швейцария',
-    //   '44': 'Великобритания',
-    //   '1': 'США'
-    // };
+  // Object.assign(user, {name: 'Pete'});
 
-    // for (let code in codes) {
-    //   alert(code);
-    // }
+  // alert(user.name);
 
-    // let user = {};
+  // let user = {
+  //   name: 'Jo',
+  //   sizes: {
+  //     height: 182,
+  //     width: 50
+  //   }
+  // };
 
-    // user.name = 'Jo';
-    // console.log(user.name);
-    // user.suraname = 'Smith';
-    // console.log(user.suraname);
-    // user.name = 'Pete';
-    // console.log(user.name);
+  // let clone = Object.assign({}, user);
 
-    // delete user.name;
+  // alert( user.sizes === clone,sizes );
 
-    // console.log(user);
+  // user.sizes.width++;
 
-    // function isEmpty(obj) {
-    //   let scedule = {};
+  // alert(user.sizes.height);
 
-    //   ans = alert( scedule.obj in scedule);
+/*----Clone Deep для обектов внутри списков-----*/
 
-    //   if (ans == true){
-    //     return false;
-    //   } else {
-    //     return true;
-    //   }
-    // }
-
-    // isEmpty();
-
-    let salaries = {
-      John: 100,
-      Ann: 160,
-      Pete: 130
-    }
-
-    sum = alert(salaries[0] + salaries[1] + salaries[2]);
+  let object = 
 
   </script>
 </body>
