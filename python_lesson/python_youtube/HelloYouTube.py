@@ -1,16 +1,9 @@
-# name = "nikita"
-# age = 22
-# attractive = True
+name = 'bro'
 
-# name, age, attractive = "nikita", 22, True
-
-# print(name)
-# print(age)
-# print(attractive)
-
-bob = bib = bab = mac = 30
-
-print(bob)
-print(bab)
-print(bib)
-print(mac)
+# print(name.find("r"))
+#print(name.lower())
+#print(name.isdigit())
+#print(name.isalpha())
+#print(name.count("o"))
+#print(name.replace("o", "a"))
+print(name*3)
