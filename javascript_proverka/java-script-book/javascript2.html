@@ -8,46 +8,28 @@
 
   <script>
 
-  // let user = { name: 'John' };
-  // let admin = { name: 'Admin' };
 
-  // function sayHi() {
-  //   alert( this.name );
-  // }
+    // function User(name) {
+    //   this.name = name;
+    //   this.isAdmin = false;
+    // }
 
-  // user.f = sayHi;
-  // admin.f = sayHi;
+    // let user = new User("Jack");
 
-  // user.f();
-  // admin.f();
+    // alert(user.name);
 
-  // admin['f']();
+    // alert(user.isAdmin);
 
-let calculator = { 
-  read:  function () {
-    calculator.num1 = prompt('Write first number: ', '');
-    calculator.num2 = prompt('Write second number: ', '');
-  },
-  sum: function () {
-    let theSum = +this.num1 + +this.num2;
+    // let user = new function() {
+    //   this.name = 'John';
+    //   this.isAdmin = false;
+    // }
 
-    return theSum;
-  },
-  mul: function () {
-    let theMul = this.num1 * this.num2;
+    // let user = {}
 
-    return theMul;
-  }
-};
+    // alert(user.address ? user.address.street : undefined);
 
-
-
-calculator.read();
-
-alert( calculator.sum() );
-alert( calculator.mul() );
-
-
+    let html = document.querySelector('.elem')?.innerHTML;
 
   </script>
 </body>
