@@ -1,51 +1,36 @@
+// выбор одного элеметна DOM по селектору
 
+// document.querySelector('selector');
 
-// const person = {
-// 	userName : 'Jo',
-// 	age : 30,
-// 	isMarried : false,
-// 	sayHi: function (name) {
-// 		console.log(this);
-// 		console.log( `Hi ${name}! My name is ${this.userName}` );
-// 	}
+//document.querySelector('h2').classList.add('red');
 
+//const heading2 = document.querySelector("h2");
+//heading2.classList.add('red');
 
-// };
+// const headings = document.querySelectorAll('h2');
 
-// person.sayHi("Mark");
+// console.log(headings);
 
-// const person = {
-// 	userName : 'Jo',
-// 	age : 30,
-// 	isMarried : false,
-// 	sayHi: function (name) {
-// 		console.log(this);
-// 		console.log( `Hi ${name}! My name is ${this.userName}` );
-// 	}
-// };
-
-
-// for (let key in person) {
-// 	console.log(key, ':', person[key]);
+// for (let heading of headings) {
+// 	heading.classList.add('red-text');
 // }
 
-// const person1 = {
-// 	userName : 'Jo',
-// 	age : 30,
-// 	isMarried : false,
-// 	sayHi: function (name) {
-// 		console.log(this);
-// 		console.log( `Hi ${name}! My name is ${this.userName}` );
-// 	}
-// };
+// const paragraphs = document.querySelectorAll('p');
+
+// for (p of paragraphs) {
+// 	p.classList.add('green-text');
+// }
+
+const img = document.querySelector('#logo');
 
 
 
-//const header = document.querySelector('h2').classList.add('red');
+// img.setAttribute('src','js/img/php.png');
 
-const headings = document.querySelectorAll('h2');
+// img.setAttribute('width', '200');
 
+// img.src = 'js/img/js.png';
 
-for (let heading of headings) {
-	heading.classList.add('red-text')
-}
+const button = document.querySelector('#button');
+
+button.setAttribute('value', 'Отправить');
