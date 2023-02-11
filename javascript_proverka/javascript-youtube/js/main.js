@@ -21,16 +21,34 @@
 // 	p.classList.add('green-text');
 // }
 
-const img = document.querySelector('#logo');
+// const button = document.querySelector('#button');
+// const img = document.querySelector('#logo');
 
+// button.value = 'Delete';
 
+// button.addEventListener('click', function () {
+// 	console.log('click!');
+// 	img.remove();
+// })
 
-// img.setAttribute('src','js/img/php.png');
+// button.onclick = function () {
+// 	console.log('click');
+// 	img.remove();
+// }
 
-// img.setAttribute('width', '200');
+// const inputText = document.querySelector('#input-text');
+// const textBlock = document.querySelector('#text-block');
 
-// img.src = 'js/img/js.png';
+// inputText.addEventListener('input', function() {
+// 	console.log(inputText.value);
+// 	textBlock.innerText = inputText.value;
+// })
 
-const button = document.querySelector('#button');
+// ====OBJECT======= 
 
-button.setAttribute('value', 'Отправить');
+const list = document.querySelector('#list');
+
+list.addEventListener('click', function(e) {
+	//console.log(this);
+	console.log(e.target);
+})
