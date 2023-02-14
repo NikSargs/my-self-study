@@ -46,9 +46,41 @@
 
 // ====OBJECT======= 
 
-const list = document.querySelector('#list');
+// const list = document.querySelector('#list');
 
-list.addEventListener('click', function(e) {
-	//console.log(this);
-	console.log(e.target);
-})
+// list.addEventListener('click', function(e) {
+// 	//console.log(this);
+// 	console.log(e.target);
+// })
+
+
+//==== Работа с элементами =====
+
+const container = document.querySelector('#elementsContainer');
+
+const newHeader = document.createElement('h1');
+
+newHeader.innerText = 'Hello there';
+
+container.append(newHeader);
+
+// const mainHeader = document.querySelector('header');
+
+// const headerCopy = mainHeader.cloneNode(true); // -- Для копирования 
+
+// container.append(headerCopy);
+
+
+// ==== Вставка через строки ===
+
+// const htmlex = '<h2>one more title</h2>';
+
+// container.insertAdjacentHTML('beforeend', htmlex);
+
+// ===== Вставка разметки через шаблонные строки =====
+
+// const title = 'title text';
+
+// const htmlex = `<h2>${title}</h2>`;
+
+// container.insertAdjacentHTML('beforeend', htmlex);
