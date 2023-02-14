@@ -1,86 +1,57 @@
-// выбор одного элеметна DOM по селектору
+// =====TO DO список задач
 
-// document.querySelector('selector');
+const todoList = document.querySelector('#todo-list');
+const todoForm = document.querySelector('#todo-form');
+const todoInput = document.querySelector('#todo-input');
 
-//document.querySelector('h2').classList.add('red');
+todoForm.addEventListener('submit', formHandler);
 
-//const heading2 = document.querySelector("h2");
-//heading2.classList.add('red');
+function formHandler (e) {
+	e.preventDefault();
+	
 
-// const headings = document.querySelectorAll('h2');
+	const taskText = todoInput.value;
 
-// console.log(headings);
+	// Создаём тег ли через разметку
 
-// for (let heading of headings) {
-// 	heading.classList.add('red-text');
-// }
+	// const li = `<li>${taskText}</li>`;
 
-// const paragraphs = document.querySelectorAll('p');
+	// // Добавляем разметку на страницу
 
-// for (p of paragraphs) {
-// 	p.classList.add('green-text');
-// }
+	// todoList.insertAdjacentHTML('beforeend', li);
 
-// const button = document.querySelector('#button');
-// const img = document.querySelector('#logo');
+	// Создаём тег с помощью создания элемента
 
-// button.value = 'Delete';
+	const newTask = document.createElement('li');
+	
+	newTask.innerText = taskText;
 
-// button.addEventListener('click', function () {
-// 	console.log('click!');
-// 	img.remove();
-// })
+	// Создаем кнопку удалить
 
-// button.onclick = function () {
-// 	console.log('click');
-// 	img.remove();
-// }
+	const deletBtn = document.createElement('button');
 
-// const inputText = document.querySelector('#input-text');
-// const textBlock = document.querySelector('#text-block');
+	deletBtn.setAttribute('role', 'button');
 
-// inputText.addEventListener('input', function() {
-// 	console.log(inputText.value);
-// 	textBlock.innerText = inputText.value;
-// })
+	deletBtn.innerText = 'Delete';
 
-// ====OBJECT======= 
-
-// const list = document.querySelector('#list');
-
-// list.addEventListener('click', function(e) {
-// 	//console.log(this);
-// 	console.log(e.target);
-// })
+	newTask.append(deletBtn);
 
 
-//==== Работа с элементами =====
+	// Добавляем событие по клику
 
-const container = document.querySelector('#elementsContainer');
-
-const newHeader = document.createElement('h1');
-
-newHeader.innerText = 'Hello there';
-
-container.append(newHeader);
-
-// const mainHeader = document.querySelector('header');
-
-// const headerCopy = mainHeader.cloneNode(true); // -- Для копирования 
-
-// container.append(headerCopy);
+	deletBtn.addEventListener('click', function(){
+		this.closest('li').remove();
+	});
 
 
-// ==== Вставка через строки ===
+	todoList.append(newTask);
 
-// const htmlex = '<h2>one more title</h2>';
+	// Очитить поле ввода
 
-// container.insertAdjacentHTML('beforeend', htmlex);
+	todoInput.value = '';
 
-// ===== Вставка разметки через шаблонные строки =====
+	// Фокус на поле ввода
 
-// const title = 'title text';
+	todoInput.focus();
+}
 
-// const htmlex = `<h2>${title}</h2>`;
-
-// container.insertAdjacentHTML('beforeend', htmlex);
