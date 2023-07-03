@@ -10,11 +10,11 @@ public class ConsoleInputDemo {
         
         String day, month;
         
-        System.out.print("Какой сегодня день?");
+        System.out.print("Какой сегодня день? ");
         
         day = input.nextLine();
         
-        System.out.print("Какой месяц?");
+        System.out.print("Какой месяц? ");
         
         month = input.nextLine();
         
