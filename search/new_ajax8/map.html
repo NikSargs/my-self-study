@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>map</title>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+
+  	<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  	<style>
+  		#map-box {
+  			height: 600px;
+  			border: 5px solid;
+  			margin: auto;
+  			width: 50%;
+  			padding: 10px; 
+
+  		}
+  		#map {
+  			height: 400px;
+  			 
+
+  		}
+  	</style>
+</head>
+<body>
+	<div id="map-box">
+		<p id="geo_error" style="background-color: red; color: #fff;">геолокация не найдена</p>
+		<div id="map">
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+
+	const geo_error = document.getElementById('geo_error');
+	geo_error.style.visibility = "hidden";
+	const urlForMap = window.location.href;
+
+	let lat = parseFloat(
+		urlForMap.substring(urlForMap.indexOf('Lat=') + 4, 
+					urlForMap.indexOf('Lng')));
+
+	let lng = parseFloat(
+		urlForMap.substring(urlForMap.indexOf('Lng=') + 4, 
+					urlForMap.indexOf('Zoom')));
+
+	let zoom = parseInt(
+		urlForMap.substring(urlForMap.indexOf('Zoom=') + 5));
+	
+	if (isNaN(lat) == true && isNaN(lng) == true)
+		lat = 42.8760, lng = 74.6049, zoom = 12, geo_error.style.visibility = "visible";
+
+	const map = L.map('map', {attributionControl: false});
+		map.setView([lat, lng], zoom);
+
+	$.ajax({
+		type: "GET", 
+	  	crossDomain: true,
+	  	dataType: 'json',
+	  	async: false,
+	  	url: 'https://cardplus.demirbank.kg/api/partner/groupedList?lang=ru',
+	  	success: function (response) {
+	  		partners = response;
+	  	}
+	});
+
+	L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	for (let key in partners){
+
+		const latitude = partners[key].branches[0].geoLat;
+
+		const longitude = partners[key].branches[0].geoLng;
+
+		if (latitude == null && longitude == null) { continue; }
+
+		var blueIcon = L.icon({
+    		iconUrl: 'mark_blue.png',
+
+    		iconSize:     [38, 95], // size of the icon
+    		shadowSize:   [50, 64], // size of the shadow
+    		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    		shadowAnchor: [4, 62],  // the same for the shadow
+    		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		var redIcon = L.icon({
+    		iconUrl: 'mark_red.png',
+
+    		iconSize:     [38, 95], // size of the icon
+    		shadowSize:   [50, 64], // size of the shadow
+    		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    		shadowAnchor: [4, 62],  // the same for the shadow
+    		popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
+
+		// let customIcon = L.icon(default_marker);
+
+		let marker = L.marker([latitude, longitude], {
+		title: partners[key].name,
+		icon: blueIcon
+	})
+		.bindPopup('<h4>' + partners[key].name + '</h4>'
+					+'<p>' + partners[key].branches[0].address + '</p>')
+		.addTo(map)
+
+		if (lat == marker._latlng.lat && lng == marker._latlng.lng) {
+			marker, {
+
+			}
+			
+			marker.openPopup()
+		}
+
+	}
+
+</script>
+</html>

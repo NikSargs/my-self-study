@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MsgWindow</title>
+   <meta charset="utf-8" />
+</head>
+<body>
+<p>This is 'MsgWindow'ty for helping</p>
+<p id="latlng" style="background-color: #E5E5E5; cursor: pointer"></p>
+
+<script>
+  // quick dirty solution to get arguments lat and lng
+  var lat = location.search.match(/lat=([^&]+)/)[1]; 
+  var lng = location.search.match(/lng=([^&]+)/)[1];
+
+  document.getElementById('latlng').innerHTML = lat + ', ' + lng;
+
+  document.getElementById('latlng').addEventListener('click', function() {
+    window.opener.flyToLatLng(lat, lng);
+  });
+
+</script>
+
+</body>
+</html>
