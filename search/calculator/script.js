@@ -2,7 +2,7 @@ let calculate_limit = document.getElementById('calculate_limit').addEventListene
 	let salary = document.getElementById('salary').value;
 	let contrib_loan = document.getElementById('contrib_loan').value;
 	if (contrib_loan <= 0) {
-		let sum = (salary / 2) * 3;
+		let sum = (salary * 0.7) * 3;
 		document.getElementById('limit').value = sum; 	
 	} else {
 		let sum = ((parseInt(salary) / 2 ) - (parseInt(contrib_loan))) * 6;
