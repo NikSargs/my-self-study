@@ -1,6 +1,6 @@
 package com.dmdev.lesson15;
 
-public class Warrior extends Hero{
+public class Warrior<T> extends Hero<T>{
     public Warrior(String name, int damage) {
         super(name, damage);
     }

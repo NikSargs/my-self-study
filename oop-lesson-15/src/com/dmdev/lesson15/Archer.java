@@ -1,6 +1,8 @@
 package com.dmdev.lesson15;
 
-public class Archer extends Hero{
+import com.dmdev.lesson18.weapon.RangeWeapon;
+
+public class Archer<T extends RangeWeapon> extends Hero<T>{
     private Wolf wolf;
     public Archer(String name, int damage) {
         super(name, damage);

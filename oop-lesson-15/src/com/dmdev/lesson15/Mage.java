@@ -1,6 +1,6 @@
 package com.dmdev.lesson15;
 
-public class Mage extends Hero{
+public class Mage<T> extends Hero<T>{
 
     public Mage(String name, int damage) {
         super(name, damage);
