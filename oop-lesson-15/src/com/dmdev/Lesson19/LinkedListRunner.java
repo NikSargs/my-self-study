@@ -1,13 +1,12 @@
 package com.dmdev.Lesson19;
 
 
-
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class ArrayListRunner {
+public class LinkedListRunner {
     public static void main(String[] args) {
-        List<Integer> integers = new ArrayList<>();
+        List<Integer> integers = new LinkedList<>();
         integers.add(1);
         integers.add(2);
         integers.add(3);
