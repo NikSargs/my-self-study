@@ -1,6 +1,8 @@
 package dog;
 
-public class Dog {
+import generics.Animal;
+
+public class Dog extends Animal {
  int size;
  String breed;
  String name;
