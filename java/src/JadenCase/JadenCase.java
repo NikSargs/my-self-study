@@ -22,18 +22,15 @@ public class JadenCase {
 
         if (phrase == null || phrase.length() == 0) {
             return null;
-//            System.out.println("nothing");
         } else {
             String[] arr = null;
             StringBuffer newString = new StringBuffer();
             arr = phrase.split(" ");
             for (int i = 0; i < arr.length; i++) {
-//                System.out.println(arr[i]);
                 String firstLetter = arr[i].substring(0,1).toUpperCase();
                 String otherLetters = arr[i].substring(1);
                 newString.append(firstLetter).append(otherLetters).append(" ");
             }
-//            System.out.println(newString);
             newString.deleteCharAt(newString.length()-1);
             return newString.toString();
         }

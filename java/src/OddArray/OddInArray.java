@@ -18,7 +18,6 @@ public class OddInArray {
                 if (!repeatNumbers.containsKey(a[i])) {
                     if (count % 2 != 0) {
                         return a[i];
-//                        System.out.println(a[i]);
                     }
                     repeatNumbers.put(a[i], count);
                     repeatCount += count;
